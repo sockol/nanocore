@@ -154,7 +154,7 @@ app.controller("homeController", ["$scope","$route","$routeParams","$rootScope",
                         "with a description of the technologies I have used, my resume and a more descriptive timeline of what I\'ve been doing for the past 6 years",
             links:{
                 github:'https://github.com/sockol/nanocore',
-                site:'http://nanocore.ru',
+                site:'http://nanocore.com',
                 link:''
             },
             code:[{
@@ -173,12 +173,13 @@ app.controller("homeController", ["$scope","$route","$routeParams","$rootScope",
             title:'Junebug Weddings',
             subtitle:'Media/News website',
             tags:['Wordpress','Raw PHP','MySql','jQuery','JS','SCSS'],
-            description:"I am rebuilding a high traffic site managed by an Austin company as a contractor.\n"+
-                        "The website is a multisite Wordpress installation that, at this point, is more raw PHP than Wordpress.",
+            description:"I am redesigning and rebuilding a high traffic site managed by an Austin company as a contractor.\n"+
+                        "The website is a multisite Wordpress installation that, at this point, is more raw PHP than Wordpress.\n"+
+                        "The new version is not coming out soon but here's a preview of what it will look like: <a href='http://jb.nanocore.com'>link</a>",
             links:{ 
                 github:'',
                 site:'http://junebugweddings.com',
-                link:'http://jb.nanocore.ru'
+                link:'http://jb.nanocore.com'
             },
         },{
             url:'/chrometv',
@@ -200,7 +201,7 @@ app.controller("homeController", ["$scope","$route","$routeParams","$rootScope",
 
             links:{
                 github:'https://github.com/sockol/chrome-tv',
-                site:'http://chrometv.nanocore.ru', 
+                site:'http://chrometv.nanocore.com', 
             },
         }],
 
@@ -249,8 +250,8 @@ app.controller("homeController", ["$scope","$route","$routeParams","$rootScope",
                         "which one can select, choose associated with them floor plans, and later pick the facades associated with the floor plans.",
             links:{
                 github:'https://github.com/sockol/starlight',
-                site:'http://wilko.nanocore.ru',
-                link:'http://wilko.nanocore.ru/wp-content/themes/starlight/js/scripts.js?ver=4.3.3'
+                site:'http://wilko.nanocore.com',
+                link:'http://wilko.nanocore.com/wp-content/themes/starlight/js/scripts.js?ver=4.3.3'
             },
         }],
 
