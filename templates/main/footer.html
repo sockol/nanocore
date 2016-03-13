@@ -1,0 +1,27 @@
+
+<footer>
+	<div class="navigation"> 
+	 
+		<a href="<?php echo $key; ?>"> 
+			<span class="text">
+				<?php echo $value; ?>
+			</span>
+		</a> 
+
+	</div>
+
+	<div class="newsletter" id="newsletter-main" style="display:none;">
+		<span class="prompt">
+			Want Junebug delivered to your inbox? Sign up for our Love Letter!
+		</span>  
+		<form method="POST" action="/action/newslettersignup">
+			<input type="email" placeholder="Enter your Email address" name="email" required>
+			<input type="submit" value="Sign Up">
+		</form>  
+	</div>
+    
+	<div class="trademark"> 
+		&copy;<?php echo date('Y'); ?> Junebug Weddings
+	</div> 
+    
+</footer>   

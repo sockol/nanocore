@@ -1,0 +1,124 @@
+<?php 
+$arr = array(
+	(object) array(
+		'href' => '/wedding-blog/',
+		'text' => 'wedding blog',
+	),
+	(object) array(
+		'href' => '/wedding-blog/category/blog-categories/wedding-planning-101/',
+		'text' => 'wedding planning',
+	),
+	(object) array(
+		'href' => '/wedding-planning/',
+		'text' => 'search vendors',
+	),
+	(object) array(
+		'href' => '/wedding-photo-gallery/',
+		'text' => 'wedding inspiration',
+	),
+	(object) array(
+		'href' => '/wedding-photo-blog/photobug/',
+		'text' => 'photo blog',
+	),
+	(object) array(
+		'href' => '/photo-contests/',
+		'text' => 'photo contests',
+	), 
+);
+?>
+ 
+<?php /*
+	require_once("classes/motd.php");
+	$motd = new Motd();
+	if($motd->isValid()) : 
+?>
+<div class="main-message">
+	<?php echo $motd->getMotd() ?>
+</div>
+<?php endif; */ ?>
+
+<!-- navigation start -->
+<nav class="bottom" id="navigation">
+
+	<div class="navigation-visible-links" id="navigation-visible-links"> 
+		
+		<?php foreach ($arr as $key => $value) : ?>
+			<a href="<?php echo $value->href; ?>" title="<?php echo $value->text; ?>"> 
+				<span class="text">
+					<?php echo $value->text; ?>
+				</span>
+                <span class="icon"></span>
+			</a>
+		<?php endforeach; ?>  
+	</div>
+
+	<button class="navigation-button" id="navigation-button">
+		<span class="bar">
+			menu
+		</span>
+	</button>
+
+	<button class="account-button" id="account-button">
+		<span class="bar">
+			account
+		</span>
+	</button>
+
+	<div class="search" id="search"> 
+		<input type="text" placeholder="Search" data-animate-width="370">
+	</div> 
+
+</nav>
+<!-- navigation end -->
+ 
+<!-- navigation dropdowns start -->
+<div class="dropdowns">
+	<div class="navigation-dropdown" id="navigation-dropdown"></div> 
+
+	<div class="account-dropdown" id="account-dropdown"> 
+		
+		<?php if(isset($_SESSION['auth']) && $_SESSION['auth'] != 0) : ?>
+			<a href="adminacctsearch.php" title="Admin"> 
+				<span class="text">
+					Admin
+				</span>
+		        <span class="icon"></span>
+			</a> 
+	    <?php endif; ?>
+
+		<?php if(isset($_SESSION['auth']) && $_SESSION['auth'] != 0) : ?>
+			<a href="/logout?returnURI={$_SERVER['REQUEST_URI']}" title="Logout"> 
+				<span class="text">
+					Logout
+				</span>
+		        <span class="icon"></span>
+			</a> 
+	    <?php else: ?>
+			<a href="/login.php" title="Login"> 
+				<span class="text">
+					Login
+				</span>
+		        <span class="icon"></span>
+			</a>  
+	    <?php endif; ?>  
+	 
+		<a href="/contact-us" title="become a member"> 
+			<span class="text">
+				Become a Member
+			</span>
+	        <span class="icon"></span>
+		</a> 
+
+		<a href="/submission-guidelines" title="Submit a Wedding"> 
+			<span class="text">
+				Submit a Wedding
+			</span>
+	        <span class="icon"></span>
+		</a>  
+	</div> 
+
+	<div class="search-dropdown" id="search-dropdown"> 
+	    <input type="text" placeholder="Search" data-animate-width="370">
+	</div> 
+</div> 
+<!-- navigation dropdowns end --> 

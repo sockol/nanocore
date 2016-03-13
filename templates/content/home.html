@@ -1,0 +1,436 @@
+<main id="scroll" ng-controller="homeController">
+
+	<section class="intro fix-width" id="intro"> 
+		<div class="start bubble-blue"  id="intro-start"></div> 
+		<div class="line-1" id="intro-line-1"></div>
+
+		<div class="info-bubble-1" id="info-bubble-1">I have built on</div>
+
+		<div class="line-2" id="intro-line-2"></div>
+		<div class="line-3" id="intro-line-3"></div>
+ 
+		<div class="box">
+			<div class="rotate shift-0">Angular</div>
+			<div class="rotate shift-1">NodeJS</div>
+			<div class="rotate shift-2">SCSS</div>
+			<div class="rotate shift-3">jQuery</div>
+			<div class="rotate shift-4">Django</div>
+			<div class="rotate shift-5">CodeIgniter</div>
+			<div class="rotate shift-6">ZendFramework-2</div>
+			<div class="rotate shift-7">Wordpress</div> 
+			<div class="rotate shift-8">Drupal</div> 
+			<div class="rotate shift-9">Shopify</div>  
+			<div class="rotate shift-10">PL/SQL</div> 
+		</div>
+
+		<div class="line-4" id="intro-line-4"></div>
+		<div class="line-5" id="intro-line-5"></div>
+
+		<div class="info-bubble-2" id="info-bubble-2">With emphasis on front-end</div>
+
+		<div class="line-6" id="intro-line-6"></div>
+
+		<div class="info-angle-1" id="info-angle-1"></div>
+
+		<div class="line-7" id="intro-line-7"></div>
+
+		<div class="info-angle-2" id="info-angle-2"></div>
+
+		<div class="line-8" id="intro-line-8"></div>
+
+		<div class="info-angle-3" id="info-angle-3"></div>
+
+		<div class="line-9" id="intro-line-9"></div>
+		<div class="end bubble-blue"    id="intro-end"></div>   
+	</section>
+ 
+	<section class="about">
+		<div class="wrap">
+			Hi! I am a self taught front-end developer who dropped my major in Economics and switched Universities twice to become a Software Engineer in the University of Texas at Austin. I tried to make the most of my time at U.T. by seeking out programming-heavy classes and launching multiple self directed web projects to learn new technologies, the most aesthetically presentable of which you will find here!
+
+			<a href="/pdf/Resume-3.1.2016.pdf" class="button button-hover" target="_blank">Download Resume</a>
+		</div>
+	</section>
+ 
+		
+			 
+		 
+
+	<section class="portfolio fix-width" id="portfolio">
+
+		<div class="start bubble-blue"  id="portfolio-start"></div> 
+
+		<div class="line-1" id="portfolio-line-1"></div>
+
+		<h2 class="info-bubble-1" id="portfolio-bubble-1">
+			My most interesting projects so far
+		</h2>
+
+		<div class="line-2" id="portfolio-line-2"></div>
+		<div class="line-3" id="portfolio-line-3"></div> 
+		<div class="line-4" id="portfolio-line-4"></div>
+		<div class="line-5" id="portfolio-line-5"></div> 
+		<div class="line-6" id="portfolio-line-6"></div> 
+		<div class="line-7" id="portfolio-line-7"></div> 
+
+		<div class="end bubble-blue" id="portfolio-end"></div>  
+ 
+		<div id="portfolio-slider" class="portfolio-slider">  
+		
+			<div class="boxes"> 
+				<div class="box" ng-repeat="block in portfolio"> 
+					<div class="item" ng-repeat="site in block" href="/portfolio{{site.url}}" ng-click="portfolioSlideRight(site)">  
+						<div class="wrap">
+							<p class="title">
+								{{site.title}}
+							</p>
+							<p class="subtitle">
+								{{site.subtitle}}
+							</p>
+							<p class="date">
+								{{site.date}}
+							</p>
+							<div class="tags">
+								<span ng-repeat="tag in site.tags">{{tag}}</span> 
+							</div>
+						</div>  
+					</div>  
+				</div>  
+			</div>
+		</div>
+
+		<div class="line-8" id="portfolio-line-8"></div> 
+ 
+		<div class="portfolio-cicle-1 bubble-red" id="portfolio-cicle-1"></div> 
+
+		<div class="quickview">
+
+			<div class="info-bubble-2 button-hover" ng-click="portfolioSlideLeft()"> < back </div>
+
+			<div class="wrap">
+				
+				<h2 class="title">{{sitePage.title}}</h2>
+				
+				<span class="subtitle">{{sitePage.subtitle}}</span>
+
+				<div class="date">
+					<div class="left">Date:</div>
+					<div class="right">{{sitePage.date}}</div> 
+				</div>
+				 
+				<div class="tags">
+					<div class="left">Technologies used:</div>
+					<div class="right">
+						<span ng-repeat="tag in sitePage.tags">{{tag}}</span> 
+					</div>
+				</div>
+
+				<div class="text">
+					<div class="left"></div>
+					<div class="right" ng-bind-html="sitePage.description"> 
+					</div>
+				</div>
+
+				<div class="links">
+					<div class="left">Links:</div>
+					<div class="right">
+						<a href="{{sitePage.links.site}}" class="button button-hover" ng-hide="sitePage.links.site==''" target="_blank">
+							Go to Website
+						</a>
+						<a href="{{sitePage.links.github}}" class="button button-hover" ng-hide="sitePage.links.github==''" target="_blank">
+							See it on Github
+						</a>
+						<a href="{{sitePage.links.link}}" class="button button-hover" ng-hide="sitePage.links.link==''" target="_blank">
+							See relevand code
+						</a>
+					</div>
+				</div> 
+
+			</div>
+
+		</div>
+
+	</section> 
+   
+	<section class="timeline" id="timeline-wrap">
+  
+		<div class="line"> 
+			<div class="part">
+			</div> 
+			<div class="date">
+				<div class="circle"></div>
+				<div class="text">2010 Aug</div>
+			</div>  
+			<div class="date" style="left:50px;">
+				<div class="circle"></div>
+				<div class="text">2011 Map</div>
+			</div>  
+		</div>
+		<div class="wrap">
+			<div class="boxes" id="timeline">
+
+				<div class="box" ng-repeat="block in timeline">
+					<a class="item {{item.top}} {{item.left}}" ng-repeat="item in block"> 
+						<div class="text">
+							{{item.text}}
+						</div>
+						<div class="bottom">
+							{{item.date}}
+						</div>
+					</a>   
+				</div>  
+
+			</div>  
+	</section>  
+
+	
+</main> 
+<!-- main end -->
+
+<script type="text/javascript">
+
+	ScrollMagicAnimation = {
+
+		controller:null,  
+
+		init: function(){
+			var self = ScrollMagicAnimation;
+			self.controller = new ScrollMagic.Controller();
+			return self.controller; 
+		}, 
+	    animationOpacity: function(id,start,duration){
+			var self = ScrollMagicAnimation;
+		   		 
+	   		duration = (duration===undefined || duration==null) ? 100 : duration;
+
+	   		var temp = TweenMax.to(id, 1, {
+				        	css: {
+				        		opacity: 1, 
+				        	}, ease: Linear.easeNone
+				        });  
+	        var l = new ScrollMagic.Scene({
+	                            offset: start,  
+	                            duration: duration
+	                        })
+	                        .setTween(temp)
+	                        .addIndicators()  
+	                        .addTo(self.controller);
+	        return l;
+	   	}, 
+		animationStretchY: function(id,stretch,start,duration){
+			var self = ScrollMagicAnimation;
+		   		
+	   		duration = (duration===undefined || duration==null) ? 100 : duration;
+
+	   		var t = new TweenMax.to(id, 1, {
+					    	css: {
+					    		height: stretch, 
+					    	}, ease: Linear.easeNone
+	        });  
+	        var l = new ScrollMagic.Scene({
+	                            offset: start, //could be triggerElement 
+	                            duration: duration
+	                        })
+	                        .setTween(t)
+	                        .addIndicators() // add indicators (requires plugin)
+	                        .addTo(self.controller);
+	        return l;
+		   		 
+	   	}, 
+		animationStretchX: function(id,stretch,start,duration){
+			var self = ScrollMagicAnimation;
+		   		
+	   		duration = (duration===undefined || duration==null) ? 100 : duration;
+
+	        var t = new TweenMax.to(id, 1, {
+				        	css: {
+				        		width: stretch, 
+				        	}, ease: Linear.easeNone
+	        });  
+	        var l = new ScrollMagic.Scene({
+	                            offset: start, //could be triggerElement 
+	                            duration: duration
+	                        })
+	                        .setTween(t)
+	                        .addIndicators() // add indicators (requires plugin)
+	                        .addTo(self.controller);
+	   		return l;
+	   	}, 
+		animationClassToggle: function (id,toggleClass,start,duration){
+			var self = ScrollMagicAnimation;
+	   		
+	   		var bubble = new ScrollMagic.Scene({ 
+				        	offset: start,
+				        	duration: duration,
+						})
+						.setClassToggle(id, toggleClass)  
+						.addIndicators() 
+						.addTo(self.controller); 
+			return bubble; 
+
+		},
+		animationFixContent: function (id,start,duration){
+			var self = ScrollMagicAnimation;
+	   		
+	   		new ScrollMagic.Scene({
+                offset: start, 
+                duration: duration
+            })
+            .setPin("#scroll")
+            .addIndicators({name: "1 (duration: 400)"})  
+            .addTo(self.controller);
+
+		},
+		animationHorizontalSlide: function(id,wrap,xSwipe,start,duration){
+			var self = ScrollMagicAnimation; 
+  
+		    var t = new TimelineMax().to("id", 1, {x: xSwipe})   
+		    var line = new ScrollMagic.Scene({
+		            offset: start,
+		            triggerHook: 0,
+		            duration: duration
+		        })
+		        .setPin(wrap)
+		        .setTween(t)
+		        .addTo(self.controller);   
+		    return line;
+		}
+	}
+
+	var sc = ScrollMagicAnimation;
+	ScrollMagicAnimation.init(); 
+	
+    /* 
+    #############################################################
+	Main pin animations
+    #############################################################
+    */ 
+    sc.animationFixContent("#scroll",50,400);
+
+	/* 
+    #############################################################
+	Intro animations
+    #############################################################
+    */   
+	bubble = sc.animationClassToggle("#intro-start", "pulse",50,100);
+	
+	start = bubble.scrollOffset();  
+    line = sc.animationStretchY("#intro-line-1",50,start,50);
+                    
+    start = line.scrollOffset()+line.duration(); 
+    line = sc.animationStretchX("#intro-line-2",400,start,50);
+
+   	sc.animationOpacity("#info-bubble-1 ",start+10,20);
+
+
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchY("#intro-line-3",200,start,50);
+	   
+   	/* box animation start */ 
+   	sc.animationOpacity("#intro .shift-0",start+40);
+   	sc.animationOpacity("#intro .shift-1",start+50);
+   	sc.animationOpacity("#intro .shift-2",start+60);
+   	sc.animationOpacity("#intro .shift-3",start+70);
+   	sc.animationOpacity("#intro .shift-4",start+80);
+   	sc.animationOpacity("#intro .shift-5",start+90); 
+   	sc.animationOpacity("#intro .shift-6",start+100);
+   	sc.animationOpacity("#intro .shift-7",start+110);
+   	sc.animationOpacity("#intro .shift-8",start+120); 
+   	sc.animationOpacity("#intro .shift-9",start+130); 
+   	sc.animationOpacity("#intro .shift-10",start+140); 
+   	/* box animation end */
+
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchX("#intro-line-4",800,start,50); 
+
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchY("#intro-line-5",100,start,50); 
+
+   	sc.animationOpacity("#info-bubble-2",start+10,20);
+
+
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchX("#intro-line-6",600,start,75); 
+
+    sc.animationOpacity("#info-angle-1",start+50,20);
+                     
+    start = line.scrollOffset()+line.duration(); 
+    line = sc.animationStretchY("#intro-line-7",100,start,50); 
+
+    sc.animationOpacity("#info-angle-2",start+10,20);
+
+    start = line.scrollOffset()+line.duration(); 
+    line = sc.animationStretchX("#intro-line-8",200,start,50);
+
+    sc.animationOpacity("#info-angle-3",start+20,20);
+
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchY("#intro-line-9",50,start,50);
+
+    start = line.scrollOffset()+line.duration();  
+	bubble = sc.animationClassToggle("#intro-end", "pulse",start,100);
+
+	/* 
+    #############################################################
+	Portfolio animations
+    #############################################################
+    */     
+
+    start = 1110;
+    sc.animationFixContent("#scroll",start,400);
+
+	bubble = sc.animationClassToggle("#portfolio-start", "pulse",start,100);
+	
+	start = bubble.scrollOffset();  
+    line = sc.animationStretchY("#portfolio-line-1",50,start,50);
+                    
+    start = line.scrollOffset()+line.duration(); 
+    line = sc.animationStretchX("#portfolio-line-2",400,start,100);
+  
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchY("#portfolio-line-3",100,start,50);
+
+   	sc.animationOpacity("#portfolio-bubble-1 ",start+10,20);
+	     
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchX("#portfolio-line-4",800,start,400); 
+
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchY("#portfolio-line-5",700,start,400); 
+ 
+    start = line.scrollOffset()+line.duration();  
+    line = sc.animationStretchX("#portfolio-line-6",400,start,50); 
+ 
+    start = line.scrollOffset()+line.duration(); 
+    line = sc.animationStretchY("#portfolio-line-7",40,start,20); 
+  
+    start = line.scrollOffset()+line.duration();  
+	bubble = sc.animationClassToggle("#intro-end", "pulse",start,20);
+
+
+	/* 
+    #############################################################
+	Horizontally sliding timeline animations
+    #############################################################
+    */  
+    start = line.scrollOffset()+line.duration()+500;   
+	//sc.animationHorizontalSlide("#timeline","#timeline-wrap", "-100%",start,"500%");
+ 	
+    var wipeAnimation = new TimelineMax() 
+        .to("#timeline", 1,   {x: "-100%"})    // move in to first panel 
+
+    // create scene to pin and link animation
+    new ScrollMagic.Scene({
+            offset: start,
+            triggerHook: 0,
+            duration: "500%"
+        })
+        .setPin("#timeline-wrap")
+        .on("start",function(){
+
+        })
+        .setTween(wipeAnimation)
+        .addTo(sc.controller);    
+ 
+
+</script>
