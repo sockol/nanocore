@@ -153,7 +153,7 @@ app.controller("homeController", ["$scope","$route","$routeParams","$rootScope",
                         "This portfolio is a simple NodeJS/Angular app (Node here is, for now, only being used as a server and to run gulp) with just 1 page (for now) "+
                         "with a description of the technologies I have used, my resume and a more descriptive timeline of what I\'ve been doing for the past 6 years",
             links:{
-                github:'',
+                github:'https://github.com/sockol/nanocore',
                 site:'http://nanocore.ru',
                 link:''
             },
@@ -176,6 +176,7 @@ app.controller("homeController", ["$scope","$route","$routeParams","$rootScope",
             description:"I am rebuilding a high traffic site managed by an Austin company as a contractor.\n"+
                         "The website is a multisite Wordpress installation that, at this point, is more raw PHP than Wordpress.",
             links:{ 
+                github:'',
                 site:'http://junebugweddings.com',
                 link:'http://jb.nanocore.ru'
             },
